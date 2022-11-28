@@ -1,0 +1,12 @@
+# In number theory, an arithmetic number is an integer for which the average of its positive divisors is also an integer. Or in other words, a number N is arithmetic if # # the number of divisors divides the sum of divisors. Given a positive integer n. The task is to check whether n is Arithmetic number or not. Examples:
+# Input : n = 6 Output : Yes Sum of divisor of 6 = 1 + 2 + 3 + 6 = 12. Number of divisor of 6 = 4. So, on dividing Sum of divisor by Number of divisor = 12/4 = 3, which # # is an integer.
+
+
+
+
+num=int(input())
+divisor=[]
+for i in range(1,num+1):
+  if num%i==0:
+    divisor.append(i)
+print(num,"is Arithmetic number : ", sum(divisor)%len(divisor)==0)
